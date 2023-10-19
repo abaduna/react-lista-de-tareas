@@ -3,6 +3,8 @@ import  {useState} from "react"
 import ListaDeTarea from './listaDetarea/listaDeTarea';
 
 
+import shortid from "shortid"
+
 const Formulario =()=>{
    const [task, setTask] = useState([])
 
@@ -21,7 +23,7 @@ const Formulario =()=>{
         setTask([
             ...task,
             {
-                id:6,
+                id:shortid.generate(),
                 title,
                 descripcion
             }
