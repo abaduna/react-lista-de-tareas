@@ -1,6 +1,6 @@
 import {Form,Button,Col,Row } from 'react-bootstrap';
 import  {useState} from "react"
-
+import ListaDeTarea from './listaDetarea/listaDeTarea';
 const Formulario =()=>{
    const [task, setTask] = useState([])
 
@@ -14,6 +14,7 @@ const Formulario =()=>{
         descripcion=descripcion.value.trim()
 
 
+
         setTask([
             ...task,
             {
@@ -22,7 +23,9 @@ const Formulario =()=>{
         
         ])
 
-      const ListaDetarea= task
+      const ListaDetareaTasl= task
+  // Vaciar el formulario
+  e.target.reset();
     }
 
 
@@ -46,8 +49,7 @@ const Formulario =()=>{
 
 </Col>
 <Col>
-<p>Tarea</p>
-<p>{title}</p>
+<ListaDeTarea titulo={task}></ListaDeTarea>
 </Col>
 
 </Row>
