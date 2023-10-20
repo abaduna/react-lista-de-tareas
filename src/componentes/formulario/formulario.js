@@ -13,13 +13,13 @@ const Formulario =()=>{
     const enviarTarea =(e)=>{
         //importante poner esto para no envie cosas el server
         e.preventDefault();
-        console.log(e)
+
+
         let [title, descripcion] = e.target.elements
         title=title.value.trim()
         descripcion=descripcion.value.trim()
 
-
-
+        if (title != "") {
         setTask([
             ...task,
             {
@@ -28,7 +28,10 @@ const Formulario =()=>{
                 descripcion
             }
         
-        ])
+        ])            
+        }
+
+
 
       const ListaDetareaTasl = task
   // Vaciar el formulario
