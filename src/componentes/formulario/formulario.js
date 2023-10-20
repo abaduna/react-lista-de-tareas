@@ -39,7 +39,9 @@ const Formulario =()=>{
     }
 
 
-
+    const elimartarea=(id)=>{
+        
+    }
 
     return(
 < Row>
